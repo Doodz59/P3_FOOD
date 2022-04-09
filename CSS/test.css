@@ -1,0 +1,149 @@
+/*Pages*/
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    scroll-behavior: smooth;
+}
+@font-face {
+  font-family: "roboto";
+  src: url(../police/Roboto/Roboto-Regular.ttf)
+  }
+@font-face {
+  font-family: "roboto-bold";
+  src: url(../police/Roboto/Roboto-Bold.ttf);
+}
+@font-face {
+      font-family: "Shrikland" ;
+      src: url(../police/Shrikhand/Shrikhand-Regular.ttf);
+  }
+  *{
+      font-family: 'roboto', sans-serif;
+      box-sizing: border-box;
+      font-weight: 300;
+      padding: 0;
+      margin: 0;
+    }
+.pages_entete {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 50px;
+    padding-left: 15px;
+    margin: 18px;
+    align-items: center;
+  }
+  .pages_entete > img {
+    width: 50%;
+  }
+  .pages_entete > .fa-arrow-left {
+    font-size: 30px;
+  }
+  
+  .img_page_entete {
+    max-width: 100%;
+    max-height: 77vw;
+    object-fit: contain;
+    overflow: hidden;
+    z-index: 3;
+  }
+  .img_page_entete img {
+    width: 100%;
+    height: 67vw;
+    object-fit: cover;
+    position: relative;
+  }
+   .container{
+    font-size: 10px;
+    object-fit: cover;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 1px 1px 8px #aaaaaa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    border-radius: 15px;
+   }
+    .btn {
+      cursor: pointer;
+      transform: scaleX(1);
+      transition: all .4s .2s ease-in-out;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      border-radius: 10px;
+      padding: 10px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .btn:hover+.fa-circle-check{
+      transform: scaleX(1);
+      color: white;
+      background-color: #15DEA5;
+      width: 10%;
+      height: 58px;
+      border-radius: 0px 10px 10px 0px;
+      font-size: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      animation: scale-x 200ms 0ms linear both;
+      visibility: visible;
+    }
+.fa-circle-check{
+  transform-origin: 100%;
+  transform: scaleX(0);
+  transition: transform 1000ms; 
+  visibility: hidden;
+
+
+    }
+
+    .big_container{
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+    }
+    .container{
+      animation: fadein 4s;
+    -moz-animation: fadein 4s; /* Firefox */
+    -webkit-animation: fadein 4s; /* Safari et Chrome */
+    -o-animation: fadein 4s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* sur Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* sur Safari et Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* sur Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+    }
