@@ -665,7 +665,10 @@ footer > nav li > a {
   /* flex-direction: column; */
   /* -webkit-box-align: center; */
   align-items: flex-end;
-  background-image: linear-gradient(298deg, #ff79da 0%, #9356dc 90%);
+  background: #9356dc linear-gradient(174deg, #ff79da);
+  animation: AnimationName 1.5s ease infinite;
+  background-repeat: no-repeat;
+  height: 100%;
   -webkit-box-pack: center;
   justify-content: center;
   position: fixed;
@@ -788,6 +791,17 @@ footer > nav li > a {
     -webkit-transform: translateY(-100%);
     transform: translateY(-100%);
     opacity: 0;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-color: #9356dc;
+  }
+  50% {
+    background-color: #ff79da;
+  }
+  100% {
+    background-color: #9356dc;
   }
 }
 
