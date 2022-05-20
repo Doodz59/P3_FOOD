@@ -18,6 +18,39 @@
   font-family: "Shrikland";
   src: url(../police/Shrikhand/Shrikhand-Regular.ttf);
 }
+.test > .koeur {
+  width: 200px;
+  height: 60px;
+  font-size: 1.3rem;
+  font-family: arial, sans-serif;
+  font-weight: 700;
+  position: relative;
+  color: white;
+  z-index: 0;
+  overflow: hidden;
+  text-decoration: none;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+.test > .koeur::before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #892cdc;
+  border-radius: 50% 50% 0% 0%;
+  z-index: -1;
+  transition: all 0.5s;
+}
+.test > .koeur:hover::before {
+  top: 0px;
+  border-radius: 0;
+  color: #15dea5;
+}
+
 * {
   font-family: "roboto", sans-serif;
   box-sizing: border-box;
@@ -123,22 +156,22 @@ button::after {
   font-size: 17px;
 }
 
-.btn--explore--txt {
+.btn--explore > a {
   background-image: linear-gradient(174deg, #ff79da 0%, #9356dc 90%);
   border: 0 solid transparent;
   border-radius: 30px;
   box-shadow: 0px 0px 12px #00000033;
   color: #fff;
   font-weight: 500;
+  text-decoration: none;
   margin: 0 auto;
   padding: 1em 1.5em;
   transition: all 0.2s ease-in-out;
   scroll-behavior: smooth;
 }
-.btn--explore--txt:hover {
+.btn--explore:hover {
   filter: brightness(1.1);
   box-shadow: rgba(50, 50, 93, 0.08) 0px 30px 60px -12px, rgba(0, 0, 0, 0.19) 0px 18px 36px -18px;
-  background-image: linear-gradient(174deg, #ff79da 0%, #9356dc 80%);
 }
 
 .btn:hover {
@@ -298,20 +331,20 @@ button::after {
   padding: 10px 15px;
 }
 .card--infos > .fa-heart {
-  bottom: 1em;
-  color: #000;
+  color: black;
   cursor: pointer;
   font-size: 25px;
-  right: 1em;
-  transition: all 0.2s;
+  transition: all 1.2s;
+  display: flex;
+  max-height: 25px;
+  animation: fillin 1.2s forwards;
+  transform-origin: 50% 100%;
 }
 .card--infos > .fa-heart:hover {
-  background: linear-gradient(#9356DC, #FF79DA);
-  color: #fff;
+  color: #FF79DA;
   font-weight: 600;
   transform: scale(1.2);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 @keyframes fillin {
   from {
@@ -346,6 +379,67 @@ button::after {
   }
   to {
     opacity: 1;
+  }
+}
+.card--infos > .fa-solid {
+  display: block !important;
+}
+.card--infos > .coeur {
+  height: 25px;
+  width: 31px;
+  display: block !important;
+  fill: white;
+  stroke: black;
+  stroke-width: 44px;
+}
+.card--infos > .coeur:hover {
+  transform: scale(1.2);
+  transform: all;
+  /*  animation: rempliss 2s  forwards ; */
+  stroke: none;
+  transform-origin: bottom;
+}
+@keyframes rempliss {
+  from {
+    fill: black;
+    fill-opacity: 0%;
+  }
+  to {
+    fill: #ff79da;
+    fill-opacity: 100%;
+  }
+}
+@-moz-keyframes rempliss {
+  /* sur Firefox */
+  from {
+    fill: black;
+    fill-opacity: 0%;
+  }
+  to {
+    fill: #ff79da;
+    fill-opacity: 100%;
+  }
+}
+@-webkit-keyframes rempliss {
+  /* sur Safari et Chrome */
+  from {
+    fill: black;
+    fill-opacity: 0%;
+  }
+  to {
+    fill: #ff79da;
+    fill-opacity: 100%;
+  }
+}
+@-o-keyframes rempliss {
+  /* sur Opera */
+  from {
+    fill: black;
+    fill-opacity: 0%;
+  }
+  to {
+    fill: #ff79da;
+    fill-opacity: 100%;
   }
 }
 .card--infos--txt {
@@ -385,17 +479,17 @@ footer > nav {
   gap: 9px;
   flex-direction: column;
 }
-footer > nav li {
+footer > nav span {
   text-decoration: none;
   list-style: none;
   color: white;
 }
-footer > nav li > a {
+footer > nav span > a {
   color: white;
   text-decoration: none;
   display: flex;
 }
-footer > nav li > a > .fa-solid {
+footer > nav span > a > .fa-solid {
   width: 25px;
 }
 
@@ -429,7 +523,7 @@ footer > nav li > a > .fa-solid {
   position: relative;
 }
 
-.corps_menu {
+#corps_menu {
   display: flex;
   background-color: #e2e2e2;
   margin-top: -40px;
@@ -438,21 +532,21 @@ footer > nav li > a > .fa-solid {
   flex-direction: column;
   padding: 2%;
 }
-.corps_menu > .menu_titre {
+#corps_menu > .menu_titre {
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin: 25px;
   gap: 15px;
 }
-.corps_menu > .menu_titre > h1 {
+#corps_menu > .menu_titre > h1 {
   font-family: "Shrikland";
   font-size: 25px;
 }
-.corps_menu > .menu_titre > .fa-heart {
+#corps_menu > .menu_titre > .fa-heart {
   font-size: 30px;
 }
-.corps_menu > .menu_titre .fa-heart:hover {
+#corps_menu > .menu_titre .fa-heart:hover {
   background: linear-gradient(#9356DC, #FF79DA);
   color: #fff;
   font-weight: 600;
@@ -484,6 +578,23 @@ footer > nav li > a > .fa-solid {
   flex-direction: column;
   align-items: center;
   margin: 20px;
+}
+.btn--comm > a {
+  background-image: linear-gradient(174deg, #ff79da 0%, #9356dc 90%);
+  border: 0 solid transparent;
+  border-radius: 30px;
+  box-shadow: 0px 0px 12px #00000033;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0 auto;
+  padding: 1em 1.5em;
+  transition: all 0.2s ease-in-out;
+  scroll-behavior: smooth;
+}
+.btn--comm:hover {
+  filter: brightness(1.1);
+  box-shadow: rgba(50, 50, 93, 0.08) 0px 30px 60px -12px, rgba(0, 0, 0, 0.19) 0px 18px 36px -18px;
 }
 
 .container {
@@ -576,7 +687,7 @@ footer > nav li > a > .fa-solid {
     opacity: 1;
   }
 }
-.accueil {
+#accueil {
   height: 100%;
   width: 100%;
   background-color: #ffff;
@@ -588,10 +699,10 @@ footer > nav li > a > .fa-solid {
   align-items: center;
   position: absolute;
   z-index: 4;
-  display: visible;
+  display: none;
   animation: AnimationName 1.5s ease infinite, fondu_out 0.2s 3s forwards;
 }
-.accueil p {
+#accueil p {
   font-size: 25px;
   font-family: "Shrikland";
   color: white;
@@ -604,6 +715,9 @@ footer > nav li > a > .fa-solid {
   position: fixed;
   top: 25%;
   display: visible;
+  margin: auto;
+  width: 151px;
+  height: 100px;
 }
 .loader .circle, .loader2 .circle {
   display: inline-block;

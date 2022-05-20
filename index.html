@@ -17,8 +17,7 @@
     <title>Oh my food!</title>
   </head>
   <body>
-    <div class="accueil">
-      
+    <div id="accueil">
       <div class="loader">
         <span class="circle circle-1"></span>
         <span class="circle circle-2"></span>
@@ -28,10 +27,8 @@
         <span class="circle circle-6"></span>
         <span class="circle circle-7"></span>
         <span class="circle circle-8"></span>
-        
-       
       </div>
-      <p> On arrive au plus vite !</p>
+      <p>On arrive au plus vite !</p>
       <div class="loader2">
         <span class="circle circle-1"></span>
         <span class="circle circle-2"></span>
@@ -41,8 +38,6 @@
         <span class="circle circle-6"></span>
         <span class="circle circle-7"></span>
         <span class="circle circle-8"></span>
-        
-       
       </div>
     </div>
     <header>
@@ -62,21 +57,18 @@
       </div>
     </header>
     <main>
-      <div id="intro">
+      <section id="intro">
         <h1>Réservez le menu qui vous convient</h1>
         <h2>
           Découvrez des restaurants d'exception, séléctionnés par nos soins.
         </h2>
         <div class="btn--explore">
           <!--Btn "explorer"-->
-          <a href="#Restaurants"
-            ><button type="button" class="btn--explore--txt">
-              Explorer nos restaurants
-            </button></a
-          >
+          <a href="#Restaurants"> Explorer nos restaurants </a>
         </div>
-      </div>
-      <div id="Fonctionnement">
+      </section>
+      <!-- Fin Intro-->
+      <section id="Fonctionnement">
         <h2>Fonctionnement</h2>
         <a href="">
           <div class="btn__fonctionnement">
@@ -108,42 +100,42 @@
             </div>
           </div>
         </a>
-      </div>
-      <div id="Restaurants">
+      </section>
+      <!-- Fin Fonctionnement-->
+      <section id="Restaurants">
         <h2>Nos restaurants</h2>
-        <div class="cartes">
-          <a href="./pages/gout.html">
+        <article class="cartes">
+          <a href="./pages/gout.html"><!--Restaurant Palette du Goût-->
             <div class="card">
-              
               <div class="card--img">
                 <img
                   src="./images/restaurants/palette.jpg"
                   alt="La palette du Goût"
                 />
                 <div class="card--img--nvx">
-                    <p>Nouveau</p>
-                  </div>
+                  <p>Nouveau</p>
+                </div>
               </div>
               <div class="card--infos">
                 <div class="card--infos--txt">
                   <h3>La palette du Goût</h3>
                   <p>Ménilmontant</p>
                 </div>
-                <i class="far fa-heart"></i>  
+                <i class="far fa-heart"></i>
               </div>
             </div>
           </a>
-          <a href="./pages/enchantee.html">
+          <a href="./pages/enchantee.html"><!--Restaurant La note enchantée-->
             <div class="card">
-              
               <div class="card--img">
                 <img
-                  src="./images/restaurants/note_enchantee.jpg" id="note_enchantee"
-                  alt="La note enchantée"   
+                  src="./images/restaurants/note_enchantee.jpg"
+                  id="note_enchantee"
+                  alt="La note enchantée"
                 />
                 <div class="card--img--nvx">
-                    <p>Nouveau</p>
-                  </div>
+                  <p>Nouveau</p>
+                </div>
               </div>
               <div class="card--infos">
                 <div class="card--infos--txt">
@@ -154,7 +146,7 @@
               </div>
             </div>
           </a>
-          <a href="./pages/francaise.html">
+          <a href="./pages/francaise.html"><!--Restaurant A la francaise-->
             <div class="card">
               <div class="card--img">
                 <img
@@ -168,10 +160,20 @@
                   <p>Cité Rouge</p>
                 </div>
                 <i class="far fa-heart"></i>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  class="coeur"
+                >
+                  <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                  <path
+                    d="M0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84.02L256 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 .0003 232.4 .0003 190.9L0 190.9z"
+                  />
+                </svg>
               </div>
             </div>
           </a>
-          <a href="./pages/sens.html">
+          <a href="./pages/sens.html"><!--Restaurant Délice des sens-->
             <div class="card">
               <div class="card--img">
                 <img
@@ -188,27 +190,30 @@
               </div>
             </div>
           </a>
-        </div>
-      </div>
+        </article>
+      </section>
+      <!-- Fin Restaurants-->
     </main>
-    <footer>
+    <footer><!--Footer avec navigation-->
       <img src="./images/logo/ohmyfood@2x.svg" alt="logo Ohmyfood" />
       <nav>
-        <li>
+        <span>
           <a href="#"
-            ><i class="fa-solid fa-utensils"></i><p>Proposer un restaurant</p></a
+            ><i class="fa-solid fa-utensils"></i> Proposer un restaurant</a
           >
-        </li>
+        </span>
 
-        <li>
+        <span>
           <a href="#"
-            ><i class="fa-solid fa-handshake-simple"></i><p>Devenir partenaire</p></a
+            ><i class="fa-solid fa-handshake-simple"></i> Devenir partenaire</a
           >
-        </li>
-        <li><a href="#"><p>Mentions légales</p></a></li>
-        <li>
-          <a href="mailto:Ceciestunefausseadressemail@gmail.com"><p>Contact</p></a>
-        </li>
+        </span>
+        <span>
+          <a href="#">Mentions légales</a>
+        </span>
+        <span>
+          <a href="mailto:Ceciestunefausseadressemail@gmail.com">Contact</a>
+        </span>
       </nav>
     </footer>
   </body>
