@@ -852,7 +852,6 @@ footer > nav span > a > .fa-solid {
   align-items: center;
   position: absolute;
   z-index: 4;
-  display: none;
   animation: AnimationName 1.5s ease infinite, fondu_out 0.2s 3s forwards;
 }
 #accueil p {
