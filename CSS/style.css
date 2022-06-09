@@ -236,7 +236,9 @@ header {
   position: relative;
   z-index: 1000;
 }
-
+.logo > img {
+  width: 40%;
+}
 
 .input {
   background-color: #999;
